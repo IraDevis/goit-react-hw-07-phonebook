@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addContact } from "../../redux/contacts/contacts-operations";
-import { getContacts } from "../../redux/contacts/contacts-selector";
+import { getAllContacts } from "../../redux/contacts/contacts-selector";
 // import shortid from "shortid";
 
 import styles from "./ContactForm.module.css";
@@ -9,7 +9,7 @@ import styles from "./ContactForm.module.css";
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(getAllContacts);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
