@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addContact } from "../../redux/contacts/contacts-actions";
+import { addContact } from "../../redux/contacts/contacts-operations";
 import { getContacts } from "../../redux/contacts/contacts-selector";
-import shortid from "shortid";
+// import shortid from "shortid";
 
 import styles from "./ContactForm.module.css";
 
@@ -37,7 +37,7 @@ export default function ContactForm() {
     }
 
     const newContact = {
-      id: shortid.generate(),
+      // id: shortid.generate(),
       name: name,
       number: number,
     };
